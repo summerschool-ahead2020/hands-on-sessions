@@ -19,7 +19,7 @@
 #
 import os
 import sys
-sys.path.insert(0, os.path.abspath('../source'))
+# sys.path.insert(0, os.path.abspath('../source'))
 
 
 # -- General configuration ------------------------------------------------
@@ -47,8 +47,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'WordCount'
-copyright = '2018, Harsha'
-author = 'Harsha'
+copyright = '2023, AHEAD2020 High-resolution spectroscopy school'
+author = 'AHEAD2020 High-resolution spectroscopy school'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
