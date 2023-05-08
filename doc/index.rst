@@ -4,10 +4,11 @@
    table of contents
 
 
-Basics
-==========
+AHEAD2020 High-resolution spectroscopy school
+=============================================
 
 .. toctree::
    :maxdepth: 2
 
+   install/install.rst
    credit.rst
