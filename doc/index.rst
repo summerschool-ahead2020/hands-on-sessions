@@ -11,4 +11,13 @@ AHEAD2020 High-resolution spectroscopy school
    :maxdepth: 2
 
    install/install.rst
+   spex/spex.rst
+   xrism/xrism.rst
+   snr/snr.rst
+   ism/ism.rst
+   agn/agn.rst
+   cluster/cluster.rst
+   xrb/xrb.rst
    credit.rst
+
+

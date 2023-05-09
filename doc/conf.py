@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# WordCount documentation build configuration file, created by
+# AHEAD2020 documentation build configuration file, created by
 # sphinx-quickstart on Fri Jun  8 14:27:52 2018.
 #
 # This file is execfile()d with the current directory set to its
@@ -31,7 +31,12 @@ import sys
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['sphinx.ext.autodoc']
+extensions = ['sphinx.ext.autodoc',
+              'sphinx.ext.todo',
+              'sphinx.ext.imgmath',
+              'sphinx.ext.viewcode',
+              'sphinx.ext.githubpages', 
+]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -46,7 +51,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'WordCount'
+project = 'AHEAD2020'
 copyright = '2023, AHEAD2020 High-resolution spectroscopy school'
 author = 'AHEAD2020 High-resolution spectroscopy school'
 
@@ -101,18 +106,12 @@ html_static_path = []
 #
 # This is required for the alabaster theme
 # refs: http://alabaster.readthedocs.io/en/latest/installation.html#sidebars
-html_sidebars = {
-    '**': [
-        'relations.html',  # needs 'show_related': True theme option to display
-        'searchbox.html',
-    ]
-}
-
+# html_sidebars = {}
 
 # -- Options for HTMLHelp output ------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'WordCountdoc'
+htmlhelp_basename = 'AHEAD2020'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -138,20 +137,20 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
-latex_documents = [
-    (master_doc, 'WordCount.tex', 'WordCount Documentation',
-     'Harsha', 'manual'),
-]
+#latex_documents = [
+#    (master_doc, 'WordCount.tex', 'WordCount Documentation',
+#     'Harsha', 'manual'),
+#]
 
 
 # -- Options for manual page output ---------------------------------------
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
-man_pages = [
-    (master_doc, 'wordcount', 'WordCount Documentation',
-     [author], 1)
-]
+#man_pages = [
+#    (master_doc, 'wordcount', 'WordCount Documentation',
+#     [author], 1)
+#]
 
 
 # -- Options for Texinfo output -------------------------------------------
@@ -159,11 +158,11 @@ man_pages = [
 # Grouping the document tree into Texinfo files. List of tuples
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
-texinfo_documents = [
-    (master_doc, 'WordCount', 'WordCount Documentation',
-     author, 'WordCount', 'One line description of project.',
-     'Miscellaneous'),
-]
+#texinfo_documents = [
+#    (master_doc, 'WordCount', 'WordCount Documentation',
+#     author, 'WordCount', 'One line description of project.',
+#     'Miscellaneous'),
+#]
 
 
 
