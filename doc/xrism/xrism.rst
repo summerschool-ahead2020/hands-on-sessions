@@ -70,4 +70,4 @@ Next, we unzip the raytrace file and download the other needed files::
     (spex) user@unix:~/xrism-hands-on$ cd products_sxs
     (spex) user@unix:~/xrism-hands-on/products_sxs$ gunzip raytrace_ah100040030sxs_p0px1010_ptsrc.fits.gz
     (spex) user@unix:~/xrism-hands-on/products_sxs$ cd ..
-    (spex) user@unix:~/xrism-hands-on$ 
+    (spex) user@unix:~/xrism-hands-on$
