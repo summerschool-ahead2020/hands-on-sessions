@@ -13,13 +13,13 @@ In this hands-on session, we will analyse a Perseus observation performed by Hit
 from the original observation files using HEASOFT. We will perform the following
 steps:
 
-    - Filter the data (good time intervals and grades),
-    - Extract images,
-    - Extract lightcurves,
-    - Generate expected background spectra,
-    - Extract spectra,
-    - Generate responses and effective area files,
-    - Fit the spectrum.
+ - Filter the data (good time intervals and grades),
+ - Extract images,
+ - Extract lightcurves,
+ - Generate expected background spectra,
+ - Extract spectra,
+ - Generate responses and effective area files,
+ - Fit the spectrum.
 
 This analysis involves quite a number of long commands, therefore we provide the
 analysis to you in the form of a Jupyter notebook. The goal of this session is
@@ -71,3 +71,30 @@ Next, we unzip the raytrace file and download the other needed files::
     (spex) user@unix:~/xrism-hands-on/products_sxs$ gunzip raytrace_ah100040030sxs_p0px1010_ptsrc.fits.gz
     (spex) user@unix:~/xrism-hands-on/products_sxs$ cd ..
     (spex) user@unix:~/xrism-hands-on$
+
+Download the HITOMI Perseus data and background files
+'''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+In addition, you will need the Perseus data from Hitomi, which can be downloaded using (for example) the
+`wget` program::
+
+    wget -q -nH --no-check-certificate --cut-dirs=5 -r -l0 -c -N -np -R 'index*' -erobots=off --retr-symlinks https://heasarc.gsfc.nasa.gov/FTP/hitomi/data/obs/1//100040030/sxs/
+    wget -q -nH --no-check-certificate --cut-dirs=5 -r -l0 -c -N -np -R 'index*' -erobots=off --retr-symlinks https://heasarc.gsfc.nasa.gov/FTP/hitomi/data/obs/1//100040030/auxil/
+
+The Non-X-ray Background (NXB) data can be downloaded here::
+
+    wget https://darts.jaxa.jp/pub/hitomi/data/nxb_20170510/ah_sxs_nxbafmar4_20140101v001.evt.gz
+    wget https://darts.jaxa.jp/pub/hitomi/data/nxb_20170510/ah_gen_nxbehk_20140101v002.fits.gz
+
+Starting jupyter notebook or jupyter lab
+''''''''''''''''''''''''''''''''''''''''
+
+In the ``spex`` conda environment, you can start Jupyter notebook or Jupyter Lab::
+
+    (spex) user@unix:~/xrism-hands-on> jupyter notebook
+
+or::
+
+    (spex) user@unix:~/xrism-hands-on> jupyter-lab
+
+A browser will open Jupyter and there you can open `Analyze_Perseus.ipynb`.

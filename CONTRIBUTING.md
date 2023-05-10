@@ -71,6 +71,8 @@ documentation. Simply upload the file (<100 Mb) to the directory of the session
 ```
 Please download :download:`spectrum.fits <spectrum.fits>` by clicking the link.
 ```
+If you have multiple files for download, then it may be better to put them in a
+tar archive or collect them in a separate repository, like [xrism-hands-on](https://github.com/summerschool-ahead2020/xrism-hands-on).
 
 Please note that Github does not like to host files bigger than 50-100 Mb, so if you
 want students to download large files, it is better to host them elsewhere. Then please
