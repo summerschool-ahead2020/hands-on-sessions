@@ -63,6 +63,23 @@ which is a Linux/Mac program to convert different types of formatted files to ot
 Let us know if you have problems with using Pandoc. We can help converting your file
 if necessary.
 
+## Adding data files, notebooks, etc.
+
+It is possible to host small data files on Github and create links to them in the
+documentation. Simply upload the file (<100 Mb) to the directory of the session
+(for example: ``doc/snr/``). In the snr.rst file, you can add a download link like this:
+```
+Please download :download:`spectrum.fits <spectrum.fits>` by clicking the link.
+```
+
+Please note that Github does not like to host files bigger than 50-100 Mb, so if you
+want students to download large files, it is better to host them elsewhere. Then please
+provide the link to the file on this site, instead of uploading it to this repository. In
+RST a link can be made like this:
+```
+Please download the `NXB file <https://darts.jaxa.jp/pub/hitomi/data/nxb_20170510/ah_sxs_nxbafmar4_20140101v001.evt.gz>`_ by clicking the link.
+```
+
 ## What if I have a problem?
 
 Please contact Jelle de Plaa if you encounter issues with this system.
