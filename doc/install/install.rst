@@ -1,3 +1,5 @@
+ .. _sect:software_install:
+
 Software installation
 =====================
 
@@ -18,6 +20,42 @@ Once you have the Jupyterlab environment running on Sciserver, write the followi
     (spex) idies@aaaa:~$ conda install -c spexxray spex pyspextools
     (spex) idies@aaaa:~$ python -m ipykernel install --user --name spex --display-name "(spex)"
 
+Running a notebook with SPEX
+''''''''''''''''''''''''''''
+
+To run a notebook with SPEX, please select the (spex) kernel from the drop down menu on the top right.
+You need to replace '(heasoft)' with '(spex)'. It may be necessary to restart the image for Jupyter to
+correctly start the (spex) environment.
+
+If the (spex) environment is not properly loaded, SPEX will not be able to start. It can take some trouble
+to make sure that the `(spex)` jupyter kernel also activates the `spex` conda environment. This should be
+done automatically, but for some reason it sometimes runs in the `heasoft` environment anyway.
+
+We made the following modifications before successfully running it:
+
+- We have added the line `"conda", "run", "--no-capture-output", "-n", "spex",` to this file
+  `~/.local/share/jupyter/kernels/spex/kernel.json` to try to make sure that conda starts the
+  spex conda environment::
+
+    {
+     "argv": [
+      "conda", "run", "--no-capture-output", "-n", "spex",
+      "/home/idies/miniconda3/envs/spex/bin/python",
+      "-m",
+      "ipykernel_launcher",
+      "-f",
+      "{connection_file}"
+     ],
+     "display_name": "(spex)",
+     "language": "python",
+     "metadata": {
+      "debugger": true
+     }
+    }
+
+- We also installed `nb_conda_kernels` into the (heasoft) conda environment: `conda install nb_conda_kernels`.
+
+Restarting the HEASOFT image on Sciserver is necessary to get the (spex) environment to work properly.
 
 Laptop setup (advanced)
 -----------------------
@@ -66,4 +104,7 @@ Now that we have a spex conda environment, you can install SPEX through conda::
 
     (spex) user@unix:~> conda install -c spexxray spex pyspextools
 
+And create a ipykernel for the (spex) environment to work in Jupyter::
+
+    (spex) user@unix:~> python -m ipykernel install --user --name spex --display-name "(spex)"
 
