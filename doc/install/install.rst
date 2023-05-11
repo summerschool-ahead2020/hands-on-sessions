@@ -15,7 +15,7 @@ Creating a conda environment for SPEX on Sciserver
 Once you have the Jupyterlab environment running on Sciserver, write the following commands in the terminal::
 
     (heasoft) idies@aaaa:~$ conda activate base
-    (base) idies@aaaa:~$ conda create -n spex python=3.9 astropy matplotlib ipykernel
+    (base) idies@aaaa:~$ conda create -n spex python=3.9 astropy matplotlib ipykernel mkl=2021.4
     (base) idies@aaaa:~$ conda activate spex
     (spex) idies@aaaa:~$ conda install -c spexxray spex pyspextools
     (spex) idies@aaaa:~$ python -m ipykernel install --user --name spex --display-name "(spex)"
