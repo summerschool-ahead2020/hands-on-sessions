@@ -12,6 +12,8 @@ In your personal directory, you can download the files for this session with thi
     (spex) idies@aaaa:~$ cd ~/workspace/Storage/<user>/persistent
     (spex) idies@aaaa:~/workspace/Storage/<user>/persistent$ git clone https://github.com/summerschool-ahead2020/spex-hands-on.git
 
+**Intro and exercises:**
+
 .. toctree::
    :maxdepth: 2
 
