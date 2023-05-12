@@ -1,6 +1,17 @@
 SPEX hands-on
 =============
 
+For this SPEX hands-on session, you can start the Sciserver image and switch to the ``(spex)``
+conda environment::
+
+    (heasoft) idies@aaaa:~$ conda activate spex
+    (spex) idies@aaaa:~$
+
+In your personal directory, you can download the files for this session with this command::
+
+    (spex) idies@aaaa:~$ cd ~/workspace/Storage/<user>/persistent
+    (spex) idies@aaaa:~/workspace/Storage/<user>/persistent$ git clone https://github.com/summerschool-ahead2020/spex-hands-on.git
+
 .. toctree::
    :maxdepth: 2
 

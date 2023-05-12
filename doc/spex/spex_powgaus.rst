@@ -1,10 +1,13 @@
 Fit a powerlaw with a Gaussian line in SPEX
 ===========================================
 
+Instructions
+------------
+
 The files :download:`powgaus.spo <powgaus.spo>`
 and :download:`powgaus.res <powgaus.res>` contain an absorbed
 powerlaw spectrum with a Gaussian line. From an optical observation of
-the source we know that this source has a redshift of :math:`z` =
+the source we know that this source has a redshift of *z* =
 0.0345. There is also Galactic foreground absorption. The source has
 been observed with the same instrument as the previous exercise.
 
@@ -37,7 +40,8 @@ been observed with the same instrument as the previous exercise.
 #. Calculate the errors on all free parameters. What is the error in the
    equivalent width that you calculated?
 
-**Learning goals:**
+Learning goals
+--------------
 
 After having done this spectrum, you should know:
 

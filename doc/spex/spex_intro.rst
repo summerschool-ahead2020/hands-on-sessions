@@ -26,23 +26,19 @@ file that can be downloaded from this site.
 SPEX needs two files per spectrum:
 
 -  ``<filename>.spo`` – This file contains the countrate per energy bin
-   for the source (:math:`D_i`), as well as the background countrate and
-   the errors (:math:`\sigma_i`).
+   for the source (D\ :sub:`i`\ ), as well as the background countrate and
+   the errors (σ\ :sub:`i`\ ).
 
 -  ``<filename>.res`` – This file contains the instrumental response:
-   the energy redistribution and effective area (:math:`R_{ij}~ A_j`).
+   the energy redistribution and effective area (R\ :sub:`ij`\  A\ :sub:`j`\ ).
 
 In order to calculate the observed model spectrum, SPEX uses this
 integral equation to account for the imperfections caused by the
 instrument:
 
-.. math::
-   D(c) =  \int R(c,E) A(E) S(E) dE
-   :label: eq_data
+- D(c) =  ∫ R(c,E) A(E) S(E) dE
 
-.. math::
-
-   D_i =  \sum_{j=1}^n R_{ij} A_j S_j
+- D\ :sub:`i`\ =  Σ\ :sup:`n` :sub:`j=1` R\ :sub:`ij`\ A\ :sub:`j`\ S\ :sub:`j`
 
 
 The ``.res`` and ``.spo`` files are so-called FITS files. This is a data
@@ -56,9 +52,19 @@ available.
 Starting SPEX in Python/Jupyter
 -------------------------------
 
+Before you continue, please make sure that you have downloaded the
+files from `<https://github.com/summerschool-ahead2020/spex-hands-on>`_
+using git as described on the page above.
+
+The ``intro`` directory that you downloaded using git, contains a
+``SPEX_Intro.ipynb`` file. You can open this notebook to get a SPEX
+demonstration in Python.
+
 When the SPEX package is installed and loaded in the environment successfully,
-it should be available in Python and Jupyter. In a Python or Jupyter session,
-SPEX can be started like this::
+the notebook should be able to run. Below, we walk through the commands
+step-by-step to explain what we do.
+
+In a Python or Jupyter session, SPEX can be started like this::
 
     >>> from pyspex.spex import Session
     >>> s=Session()
@@ -73,10 +79,10 @@ commands used on the SPEX command line.
 As a first step, we can load the data files. This is done using the `s.data()
 <https://spex-xray.github.io/spex-help/pyspex/com_data.html#data>`_ command.
 The command first expects the response file (with the `.res` extension) and
-then the spectrum file (`.spo` extension). If you have a file called ``filename.spo``
-and ``filename.res`` then you type::
+then the spectrum file (`.spo` extension). In the intro directory we have a
+file called ``powerl.spo`` and ``powerl.res``. To load them, you type::
 
-   >>> s.data("filename.res","filename.spo")
+   >>> s.data("powerl.res","powerl.spo")
 
 The responsefile (.res) is entered first and then the file containing
 the spectrum (.spo). Remember that the order of the words in the
@@ -100,7 +106,7 @@ This will create a linear-linear plot in keV units.
 The plot can be tailored to your wishes. Below is an example to create a
 plot to a log-log plot in Å::
 
-   >>> s.plot_data(xlog=True, ylog=true, wave=True)
+   >>> s.plot_data(xlog=True, ylog=True, wave=True)
 
 To make sure the axes are logarithmic, we provide the options (``xlog=True`` and
 ``ylog=True``) and change the axes to unit Å using ``wave=true``.
@@ -198,7 +204,7 @@ provided to SPEX. This is done with the `s.distance()
 <https://spex-xray.github.io/spex-help/pyspex/com_model.html#distance>`_
 command::
 
-   >>> s.distance(1, 0.1, 'z')
+   >>> s.dist(1, 0.1, 'z')
 
 With this command, the distance to the source is set to a redshift of
 0.1.
@@ -241,7 +247,7 @@ We can set the parameters using the `s.par()
 command. The commands then look like this::
 
    >>> s.par(1, 1, 'z', 0.1)
-   >>> s.par(1, 2, 'nh', 2.E-3, thawn=True)
+   >>> s.par(1, 2, 'nh', 2.E-3, thawn=False)
    >>> s.par(1, 3, 'norm', 1.E+10, thawn=True)
    >>> s.par(1, 3, 'gamm', 1.5, thawn=True)
 
@@ -295,30 +301,36 @@ close to the expected C-stat value, then your fit is acceptable.
 Sometimes more runs of the command `s.fit()
 <https://spex-xray.github.io/spex-help/pyspex/com_opt.html#fit>`_ are
 necessary after changing some initial parameters. This is especially true
-when using complex models. Again this is a game of trial and error.
+when using complex models. Again this is a game of trial and error::
+
+    >>> s.fit()
 
 You also might want to fix or free certain parameters to see if they can
 be constrained. You can fix a parameter with the command `s.par_fix
 <https://spex-xray.github.io/spex-help/pyspex/com_model.html#fix-free-parameters>`_ and
 freeing is done with `s.par_free() <https://spex-xray.github.io/spex-help/pyspex/com_model.html#fix-free-parameters>`_
-(thawn). You can free the redshift and fix the :math:`N_{\mathrm{H}}` by
-the following commands::
+(thawn). For example, you can free the N\ :sub:`H` by the following command::
 
-   >>> s.par_free(1,1,'z')
-   >>> s.par_fix(1,2,'nh')
+   >>> s.par_free(1,2,'nh')
 
 Calculating errors
 ------------------
 
 When the fit is acceptable, you might want to know the uncertainties on
 your fitted parameters. Errors are determined one-by-one by fixing the
-parameter to some value and calculate the :math:`\Delta` C-stat with
-respect to the best fit. If you want to know the 1\ :math:`\sigma` error
-on the parameter, you need to know its values at :math:`\Delta` C-stat =
-1. This is done by the `s.error
+parameter to some value and calculate the ΔC-stat with
+respect to the best fit. If you want to know the 1σ error
+on the parameter, you need to know its values at ΔC-stat = 1.
+This is done by the `s.error
 <https://spex-xray.github.io/spex-help/pyspex/com_opt.html#error>`_ command. You
-can calculate the error for each parameter. For example redshift::
+can calculate the error for each parameter. For example gamma::
 
-   >>> zerr = s.error(1,1,'z')
+   >>> gamm_err = s.error(1,1,'gamm')
 
-The result of the error calculation is stored in the ``zerr`` object.
+The result of the error calculation is stored in the
+[gamm_err](https://spex-xray.github.io/spex-help/pyspex/optimize.html#error-calculation) object.
+
+Checking your result
+--------------------
+
+

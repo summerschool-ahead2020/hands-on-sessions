@@ -1,6 +1,9 @@
 Fit a power law in SPEX
 =======================
 
+Instructions
+------------
+
 The spectrum in the files :download:`powerl.spo <powerl.spo>`
 and :download:`powerl.res <powerl.res>` was recorded
 from a source at 6 kpc distance.
@@ -21,7 +24,8 @@ from a source at 6 kpc distance.
 #. Calculate the errors on all free parameters and save your results in
    a python variable.
 
-**Learning goals:**
+Learning goals
+--------------
 
 After having done this spectrum, you should know:
 
