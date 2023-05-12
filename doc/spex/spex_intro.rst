@@ -168,7 +168,7 @@ Defining a model
 
 Now we have a clean and rebinned spectrum that is ready to fit. Before
 we can start fitting, we first need to define a model. It’s equivalent
-to :math:`S(E)` in Eq. :eq:`eq_data`. The model can contain
+to S(E) in the equation above. The model can contain
 one or more of these components:
 
 -  ``absm`` Model for interstellar absorption.
@@ -328,9 +328,7 @@ can calculate the error for each parameter. For example gamma::
    >>> gamm_err = s.error(1,1,'gamm')
 
 The result of the error calculation is stored in the
-[gamm_err](https://spex-xray.github.io/spex-help/pyspex/optimize.html#error-calculation) object.
+`gamm_err <https://spex-xray.github.io/spex-help/pyspex/optimize.html#error-calculation>`_ object.
 
-Checking your result
---------------------
 
 
