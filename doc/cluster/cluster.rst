@@ -14,7 +14,7 @@ Create an account on Renku by visiting the following website
 `https://renkulab.io <https://renkulab.io/>`_
 
 .. image:: renku_login.png
-   :width: 40pt
+   :width: 400pt
 
 Once you have created an account, visit the `page of the project <https://renkulab.io/projects/dominique.eckert/galaxy-cluster-profiles>`_
 and click *Start* on the top-right corner.
@@ -40,7 +40,7 @@ To download the data package, open a Terminal and run::
     wget https://www.isdc.unige.ch/~deckert/A1689_spectral_fitting.tar.gz
     tar xvf A1689_spectral_fitting.tar.gz
 
-
+You can then launch the Jupyter notebook entitled *A1689_spectral_analysis.ipynb*
 
 
 
