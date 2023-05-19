@@ -20,6 +20,14 @@ Once you have the Jupyterlab environment running on Sciserver, write the followi
     (spex) idies@aaaa:~$ conda install -c spexxray spex pyspextools
     (spex) idies@aaaa:~$ python -m ipykernel install --user --name spex --display-name "(spex)"
 
+It may be necessary to restart the Jupyter session on Sciserver to load the new SPEX environment into Jupyter properly.
+To do that, execute the following steps:
+
+- Close the Jupyter window and go back to the page on Sciserver with the list of your images.
+- On this page, you can stop running the image by clicking the red square after the image name. Wait until the image is stopped.
+- When the image is fully stopped and the page reloaded, you can click the green triangle to start the image again.
+- Click on the name of the image to start Jupyter again. In this new session, SPEX should work in Jupyter.
+
 Running a notebook with SPEX
 ''''''''''''''''''''''''''''
 
@@ -108,3 +116,14 @@ And create a ipykernel for the (spex) environment to work in Jupyter::
 
     (spex) user@unix:~> python -m ipykernel install --user --name spex --display-name "(spex)"
 
+Troubleshooting
+---------------
+
+Importing SPEX in Jupyter fails
+'''''''''''''''''''''''''''''''
+
+When you have Jupyter installed in multiple places, it sometimes happens that the wrong Jupyter executable is called. 
+If you have trouble importing SPEX, then try to run Jupyterlab like this to force it to use Jupyter from the SPEX 
+environment::
+
+    (spex) user@unix:~> $CONDA_PREFIX/bin/jupyter-lab &
