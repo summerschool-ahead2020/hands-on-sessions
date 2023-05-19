@@ -127,3 +127,5 @@ If you have trouble importing SPEX, then try to run Jupyterlab like this to forc
 environment::
 
     (spex) user@unix:~> $CONDA_PREFIX/bin/jupyter-lab &
+
+See also `this discussion <https://github.com/spex-xray/spex-help/issues/32>`_for more hints.
