@@ -65,6 +65,12 @@ We made the following modifications before successfully running it:
 
 Restarting the HEASOFT image on Sciserver is necessary to get the (spex) environment to work properly.
 
+Alternative: Renkulab
+---------------------
+
+We also have a `Jupyterlab environment with SPEX at Renkulab.io <https://renkulab.io/projects/j.de.plaa/ahead2020-school-spex/sessions/new?autostart=1>`_.
+Unfortuntately, HEASOFT is not (yet) working well in Jupyter Lab on Renkulab. The XRISM hands-on session is best done on Sciserver.
+
 Laptop setup (advanced)
 -----------------------
 
