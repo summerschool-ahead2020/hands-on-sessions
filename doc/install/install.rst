@@ -15,7 +15,7 @@ Creating a conda environment for SPEX on Sciserver
 Once you have the Jupyterlab environment running on Sciserver, write the following commands in the terminal::
 
     (heasoft) idies@aaaa:~$ conda activate base
-    (base) idies@aaaa:~$ conda create -n spex python=3.9 astropy matplotlib ipykernel mkl=2021.4
+    (base) idies@aaaa:~$ conda create -n spex python=3.9 astropy matplotlib ipykernel
     (base) idies@aaaa:~$ conda activate spex
     (spex) idies@aaaa:~$ conda install -c spexxray spex pyspextools
     (spex) idies@aaaa:~$ python -m ipykernel install --user --name spex --display-name "(spex)"
@@ -63,7 +63,11 @@ We made the following modifications before successfully running it:
 
 - We also installed `nb_conda_kernels` into the (heasoft) conda environment: `conda install nb_conda_kernels`.
 
-Restarting the HEASOFT image on Sciserver is necessary to get the (spex) environment to work properly.
+Restarting the HEASOFT image on Sciserver is necessary to get the (spex) environment to work properly. If you get 
+errors about a missing mkl library, then you may need to install an earlier version of MKL. You can do that with 
+the command::
+
+    (spex) idies@aaaa:~$ conda install mkl=2021.4
 
 Alternative: Renkulab
 ---------------------
