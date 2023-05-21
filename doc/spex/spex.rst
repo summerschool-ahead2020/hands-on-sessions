@@ -15,7 +15,7 @@ In your personal directory, you can download the files for this session with thi
 Alternative: Renkulab
 ---------------------
 
-Start a `Jupyter Session with SPEX at Renkulab.io <https://renkulab.io/projects/j.de.plaa/ahead2020-school-spex/sessions/new?autostart=1>`_.
+Start a `Jupyter Session with SPEX at Renkulab.io <https://renkulab.io/projects/j.de.plaa/ahead2020-school-spex/sessions/>`_.
 
 **Intro and exercises:**
 
