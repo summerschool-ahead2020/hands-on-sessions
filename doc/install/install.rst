@@ -115,7 +115,7 @@ If you do not have conda yet, please install it using `these instructions <https
 
 Once your conda installation is set up, you can create a spex environment::
 
-    (base) user@unix:~> conda create -n spex python=3.9 numpy scipy astropy pytest jupyter-lab matplotlib pip mkl=2021.4
+    (base) user@unix:~> conda create -n spex python=3.9 numpy scipy astropy pytest jupyterlab matplotlib pip mkl=2021.4
     (base) user@unix:~> conda activate spex
 
 Now that we have a spex conda environment, you can install SPEX through conda::
