@@ -12,8 +12,7 @@ In your personal directory, you can download the files for this session with thi
     (spex) idies@aaaa:~$ cd ~/workspace/Storage/<user>/persistent
     (spex) idies@aaaa:~/workspace/Storage/<user>/persistent$ git clone https://github.com/summerschool-ahead2020/spex-hands-on.git
 
-Alternative: Renkulab
----------------------
+**Alternative: Renkulab**
 
 Start a `Jupyter Session with SPEX at Renkulab.io <https://renkulab.io/projects/j.de.plaa/ahead2020-school-spex/sessions/>`_.
 
