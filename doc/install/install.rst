@@ -20,30 +20,16 @@ Once you have the Jupyterlab environment running on Sciserver, write the followi
     (spex) idies@aaaa:~$ conda install -c spexxray spex pyspextools
     (spex) idies@aaaa:~$ python -m ipykernel install --user --name spex --display-name "(spex)"
 
-It may be necessary to restart the Jupyter session on Sciserver to load the new SPEX environment into Jupyter properly.
-To do that, execute the following steps:
+Next we have add the following line `"conda", "run", "--no-capture-output", "-n", "spex",` to this file
+`~/.local/share/jupyter/kernels/spex/kernel.json` to try to make sure that conda starts the
+spex conda environment::
 
-- Close the Jupyter window and go back to the page on Sciserver with the list of your images.
-- On this page, you can stop running the image by clicking the red square after the image name. Wait until the image is stopped.
-- When the image is fully stopped and the page reloaded, you can click the green triangle to start the image again.
-- Click on the name of the image to start Jupyter again. In this new session, SPEX should work in Jupyter.
+    (spex) idies@aaaa:~$ vi ~/.local/share/jupyter/kernels/spex/kernel.json
 
-Running a notebook with SPEX
-''''''''''''''''''''''''''''
+In vi, get into edit mode by typing `i`. Now, you have a cursor to edit the text file. Add the line 
+`"conda", "run", "--no-capture-output", "-n", "spex",` after the `"argv": [` line. 
 
-To run a notebook with SPEX, please select the (spex) kernel from the drop down menu on the top right.
-You need to replace '(heasoft)' with '(spex)'. It may be necessary to restart the image for Jupyter to
-correctly start the (spex) environment.
-
-If the (spex) environment is not properly loaded, SPEX will not be able to start. It can take some trouble
-to make sure that the `(spex)` jupyter kernel also activates the `spex` conda environment. This should be
-done automatically, but for some reason it sometimes runs in the `heasoft` environment anyway.
-
-We made the following modifications before successfully running it:
-
-- We have added the line `"conda", "run", "--no-capture-output", "-n", "spex",` to this file
-  `~/.local/share/jupyter/kernels/spex/kernel.json` to try to make sure that conda starts the
-  spex conda environment::
+In the end, the contents of `~/.local/share/jupyter/kernels/spex/kernel.json` should look like this::
 
     {
      "argv": [
@@ -61,13 +47,16 @@ We made the following modifications before successfully running it:
      }
     }
 
-- We also installed `nb_conda_kernels` into the (heasoft) conda environment: `conda install nb_conda_kernels`.
+When the contents of the file look OK, press the `<Esc>` key on your keyboard, and then type `:x` followed by 
+the `<return>` key. The file should be saved now.
 
-Restarting the HEASOFT image on Sciserver is necessary to get the (spex) environment to work properly. If you get 
-errors about a missing mkl library, then you may need to install an earlier version of MKL. You can do that with 
-the command::
+It is necessary to restart the Jupyter session on Sciserver to load the new SPEX environment into Jupyter properly.
+To do that, execute the following steps:
 
-    (spex) idies@aaaa:~$ conda install mkl=2021.4
+- Close the Jupyter window and go back to the page on Sciserver with the list of your images.
+- On this page, you can stop running the image by clicking the red square after the image name. Wait until the image is stopped.
+- When the image is fully stopped and the page reloaded, you can click the green triangle to start the image again.
+- Click on the name of the image to start Jupyter again. In this new session, SPEX should work in Jupyter.
 
 Alternative: Renkulab
 ---------------------
