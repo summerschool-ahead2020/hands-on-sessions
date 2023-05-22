@@ -27,7 +27,7 @@ spex conda environment::
     (spex) idies@aaaa:~$ vi ~/.local/share/jupyter/kernels/spex/kernel.json
 
 In vi, get into edit mode by typing ``i``. Now, you have a cursor to edit the text file. Add the line 
-``"conda", "run", "--no-capture-output", "-n", "spex",` after the `"argv": [`` line. 
+``"conda", "run", "--no-capture-output", "-n", "spex",`` after the ``"argv": [`` line. 
 
 In the end, the contents of ``~/.local/share/jupyter/kernels/spex/kernel.json`` should look like this::
 
