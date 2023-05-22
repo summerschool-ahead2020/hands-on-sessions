@@ -20,16 +20,16 @@ Once you have the Jupyterlab environment running on Sciserver, write the followi
     (spex) idies@aaaa:~$ conda install -c spexxray spex pyspextools
     (spex) idies@aaaa:~$ python -m ipykernel install --user --name spex --display-name "(spex)"
 
-Next we have add the following line `"conda", "run", "--no-capture-output", "-n", "spex",` to this file
-`~/.local/share/jupyter/kernels/spex/kernel.json` to try to make sure that conda starts the
+Next we have add the following line ``"conda", "run", "--no-capture-output", "-n", "spex",`` to this file
+``~/.local/share/jupyter/kernels/spex/kernel.json`` to try to make sure that conda starts the
 spex conda environment::
 
     (spex) idies@aaaa:~$ vi ~/.local/share/jupyter/kernels/spex/kernel.json
 
-In vi, get into edit mode by typing `i`. Now, you have a cursor to edit the text file. Add the line 
-`"conda", "run", "--no-capture-output", "-n", "spex",` after the `"argv": [` line. 
+In vi, get into edit mode by typing ``i``. Now, you have a cursor to edit the text file. Add the line 
+``"conda", "run", "--no-capture-output", "-n", "spex",` after the `"argv": [`` line. 
 
-In the end, the contents of `~/.local/share/jupyter/kernels/spex/kernel.json` should look like this::
+In the end, the contents of ``~/.local/share/jupyter/kernels/spex/kernel.json`` should look like this::
 
     {
      "argv": [
@@ -47,8 +47,8 @@ In the end, the contents of `~/.local/share/jupyter/kernels/spex/kernel.json` sh
      }
     }
 
-When the contents of the file look OK, press the `<Esc>` key on your keyboard, and then type `:x` followed by 
-the `<return>` key. The file should be saved now.
+When the contents of the file look OK, press the ``<Esc>`` key on your keyboard, and then type ``:x`` followed by 
+the ``<return>`` key. The file should be saved now.
 
 It is necessary to restart the Jupyter session on Sciserver to load the new SPEX environment into Jupyter properly.
 To do that, execute the following steps:
