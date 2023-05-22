@@ -11,6 +11,12 @@ spectra from Python. Alternatively, you could read the
 `Introduction to the SPEX command-line interface
 <https://spex-xray.github.io/spex-help/getstarted/runspex.html>`_.
 
+Before we begin, here are some useful links:
+
+- `SPEX Manual <https://spex-xray.github.io/spex-help/index.html>`_
+- `SPEX Python interface <https://spex-xray.github.io/spex-help/pyspex.html>`_
+- `Python tools for SPEX data format <https://spex-xray.github.io/pyspextools/>`_
+
 The SPEX data format
 --------------------
 
