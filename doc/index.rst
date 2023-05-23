@@ -13,7 +13,6 @@ AHEAD2020 High-resolution spectroscopy school
    install/install.rst
    spex/spex.rst
    xrism/xrism.rst
-   snr/snr.rst
    ism/ism.rst
    agn/agn.rst
    cluster/cluster.rst
