@@ -1,7 +1,11 @@
 X-ray binaries hands-on session
 ===================================
 
-Thursday, 14:00-16:00, Maria Diaz Trigo
+You can download the exercises in a directory on your laptop from Github::
+
+  user@linux:~> git clone https://github.com/summerschool-ahead2020/xraybinary-hands-on.git
+
+Thursday, 12:30-13:30, Maria Diaz Trigo
 
 This session is meant to fit high spectral resolution data from a known X-ray binary using continuum and a photoionized plasma model. 
 
