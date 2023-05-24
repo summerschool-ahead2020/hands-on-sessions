@@ -1,7 +1,7 @@
 X-ray binaries hands-on session
 ===================================
 
-You can download the exercises in a directory on your laptop from Github::
+You can download the exercises in a directory on your laptop/Sciserver from Github::
 
   user@linux:~> git clone https://github.com/summerschool-ahead2020/xraybinary-hands-on.git
 
