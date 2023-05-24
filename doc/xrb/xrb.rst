@@ -1,4 +1,37 @@
+X-ray binaries hands-on session
+===================================
 
-X-ray binary hands-on
-=====================
+Thursday, 14:00-16:00, Maria Diaz Trigo
 
+This session is meant to fit high spectral resolution data from a known X-ray binary using continuum and a photoionized plasma model. 
+
+Chandra/HETG spectra of a black hole X-ray binary
+---------------------------------
+Exercise 1
+---------------------------------
+The files below contain a HETG spectrum of the black hole X-ray binary 4U 1630-47. Load the spectra into SPEX and try to fit them with a continuum model. The spectrum is expected to contain absorption lines from a photoionised plasma and perhaps also a broad iron line arising from reflection or scattering in the plasma. Use Gaussians to fit the line features you find. How many lines do you find? Are they in absorption or emission? Would you describe them as “narrow” or “broad”? Can you identify the ions originating the lines? 
+
+•	xrbhetg.res
+
+•	xrbhetg.spo
+
+Hints: The HETG has a High Energy and a Medium Energy grating. Therefore, you will fit two spectra simultaneously in spex. Once you have the model for the first spectrum, you can use “sector copy 1” to create a copy of the model of the first spectrum to fit also to the second spectrum.
+
+From Gatuzz et al. 2019 the continuum spectrum is best fitted with a model made up of a disk blackbody absorbed in the ISM. 
+
+Exercise 2
+---------------------------------
+The lines fitted in Exercise 1 can also be modelled with self-consistent models such as reflection or a photoionised plasma. Try now to substitute the lines by self-consistent models. First try to include a model for the PIE plasma that accounts for the absorption lines. Do you observe any changes in the continuum? Why do you think this is happening? How many lines do you see in the plasma? Is the plasma representative of an atmosphere or of a wind? Can one slab account for all the absorption? If not, add a second plasma. 
+
+Hint: You can use a distance of 8 kpc. The PIE plasma can be modelled with xabs, which represents absorption by a single slab of photoionized plasma. First fix the turbulent velocity (v) and velocity shift (zv) of the plasma and try to fit the NH and ionization parameter. Once you have a good fit try to improve it by fitting also the velocity width and shift.
+
+XRISM simulation of an X-ray binary
+---------------------------------
+Exercise 3
+---------------------------------
+At least one of the lines in the spectra fitted in Exercises 1 and 2 is blended due to the resolution of the spectra. The upcoming X-ray microcalorimeter onboard XRISM will allow to resolve the lines and remove degeneracies in spectral fitting. xrbXRISM.spo and xrbXRISM.res contain a simulated XRB spectrum as expected to be observed by XRISM. Repeat the fitting steps from Exercises 1 and 2. Which differences do you observe in the spectral parameters compared to the previous spectra? Which lines are you resolving now compared to previous exercises?
+
+
+•	xrbXRISM.res
+
+•	xrbXRISM.spo
