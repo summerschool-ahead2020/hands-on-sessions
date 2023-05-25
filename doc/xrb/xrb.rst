@@ -35,7 +35,7 @@ Commands
     s.plot_data()
     s.com('hot')
     s.com('dbb')
-    s.com_rel(1,2,numpy.array([1])
+    s.com_rel(1,2,numpy.array([1]))
     s.par(1,1,'nh',8e-2)
     s.par(1,2,'t',2.8)
     s.par(1,2,'norm',1e-9)
