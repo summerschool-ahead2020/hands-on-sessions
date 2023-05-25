@@ -22,6 +22,29 @@ Hints: The HETG has a High Energy and a Medium Energy grating. Therefore, you wi
 
 From Gatuzz et al. 2019 the continuum spectrum is best fitted with a model made up of a disk blackbody absorbed in the ISM. 
 
+Commands
+''''''''
+::
+    
+    s.data("xrbhetg.res","xrbhetg.spo")
+    s.dist(1,8.,'kpc') 
+    s.ignore(1,1,0.,1.5,'kev')
+    s.ignore(1,2,0.,1.5,'kev')
+    s.ignore(1,1,10,20,'kev')
+    s.ignore(1,2,4.5,20,'kev')
+    s.plot_data()
+    s.com('hot')
+    s.com('dbb')
+    s.com_rel(1,2,numpy.array([1])
+    s.par(1,1,'nh',8e-2)
+    s.par(1,2,'t',2.8)
+    s.par(1,2,'norm',1e-9)
+    s.sector_copy(1)
+    s.par_couple(2,1,'nh',1,1,'nh',1.0)
+    s.par_couple(2,2,'t',1,2,'t')
+    s.par_couple(2,2,'norm',1,2,'norm',1.0)
+
+
 Exercise 2: Use self-consistent models
 --------------------------------------
 
