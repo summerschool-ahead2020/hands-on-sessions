@@ -19,7 +19,7 @@ The files below contain a HETG spectrum of the black hole X-ray binary 4U 1630-4
 
 •	xrbhetg.spo
 
-Hints: The HETG has a High Energy and a Medium Energy grating. Therefore, you will fit two spectra simultaneously in spex. Once you have the model for the first spectrum, you can use “sector copy 1” to create a copy of the model of the first spectrum to fit also to the second spectrum.
+Hints: The HETG has a High Energy and a Medium Energy grating. Therefore, you will fit two spectra simultaneously in spex. Once you have the model for the first spectrum, you can use ``s.sector_copy(1)`` to create a copy of the model of the first spectrum to fit also to the second spectrum.
 
 From Gatuzz et al. 2019 the continuum spectrum is best fitted with a model made up of a disk blackbody absorbed in the ISM. 
 
