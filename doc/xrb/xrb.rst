@@ -41,7 +41,7 @@ Commands
     s.par(1,2,'norm',1e-9)
     s.sector_copy(1)
     s.par_couple(2,1,'nh',1,1,'nh',1.0)
-    s.par_couple(2,2,'t',1,2,'t')
+    s.par_couple(2,2,'t',1,2,'t',1.0)
     s.par_couple(2,2,'norm',1,2,'norm',1.0)
 
 
