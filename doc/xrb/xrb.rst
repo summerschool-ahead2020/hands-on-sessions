@@ -1,6 +1,9 @@
 X-ray binaries hands-on session
 ===================================
 
+The slides of the introduction to low-mass X-ray binaries given by María Díaz Trigo can be found [here](https://doi.org/10.5281/zenodo.8020478). 
+These slides contain useful background information before doing the exercise below.
+
 You can download the exercises in a directory on your laptop/Sciserver/Renkulab/etc from Github::
 
   user@linux:~> git clone https://github.com/summerschool-ahead2020/xraybinary-hands-on.git
